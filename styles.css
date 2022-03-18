@@ -40,7 +40,7 @@ body {
   max-width: 900px;
   display: flex;
   
-  overflow: hidden;
+  /* overflow: hidden; */
   gap: 2rem;
   width: 100%;
  
@@ -57,19 +57,28 @@ body {
   padding-bottom: 0;
 } 
 
+.card__img__two{
+  overflow: visible;
+  position: absolute;
+  top: 38%;
+  left: -26%;
+}
+
 .img__one {
   width: 100%;
   position: absolute;
-  left: -20%;
+  left: -15%;
   top: 20%;
+  
+  
 }
 
 .img__two {
-  width: 50%;
+  width: 100%;
   z-index: 1;
-  position: absolute;
-  left: -38%;
-  top: 40%;
+  
+  
+
 }
 
 /* card__text section */
@@ -114,19 +123,38 @@ h1 {
   width: 10px;
   height: 10px;
   background-position: center center;
+  transition: transform 500ms ease-in-out;
 }
+
+.accordion__question.open{
+  font-weight: 700;
+  color: black;
+}
+
+.accordion__question.open::after {
+  transform: rotate(180deg);
+}
+
+.accordion__collapse{
+  height: 0;
+  overflow: hidden;
+  
+}
+
+.accordion__collapse.open{
+  height: auto;
+}
+
 
 .accordion__text {
   line-height: 1.4;
-  display: none;
+
 }
+
+
 
 hr {
   margin: 0.5rem 0;
   color: var(--Very-dark-desaturated-blue);
 }
 
-.open {
-  font-size: bold;
-  font-weight: 700;
-}
